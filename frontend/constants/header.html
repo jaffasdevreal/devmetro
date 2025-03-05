@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <style>
-        /* Apply Apple's SF Pro font */
         @font-face {
             font-family: 'SF Pro Display';
             src: url('/frontend/fonts/sf-pro-display-regular.woff2') format('woff2');
@@ -21,13 +20,12 @@
             color: white;
         }
 
-        /* Header styles */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 35px; /* 20% shorter */
+            height: 35px;
             background-color: rgba(36, 35, 39, 0.9);
             display: flex;
             align-items: center;
@@ -36,15 +34,13 @@
             z-index: 1000;
         }
 
-        /* Logo styles */
         header img {
-            height: 30px; /* Adjusted for smaller header */
+            height: 30px;
             margin-right: 50px;
             opacity: 0.75;
             transition: opacity 0.3s ease-in-out;
         }
 
-        /* Navigation */
         nav ul {
             list-style: none;
             margin: 0;
@@ -66,7 +62,6 @@
             transition: opacity 0.3s ease-in-out;
         }
 
-        /* Hover Effects */
         header img:hover,
         nav ul li a:hover {
             opacity: 1;
