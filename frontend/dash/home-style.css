@@ -1,0 +1,66 @@
+/* Apply Apple's SF Pro font */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/frontend/fonts/sf-pro-display-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    font-family: 'SF Pro Display', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+/* Styling for the Apple Intelligence heading */
+h1 {
+    font-size: 48px;
+    font-weight: 700; /* Makes it bold */
+    letter-spacing: -0.02em; /* Apple-style tight letter spacing */
+    opacity: 1; /* No fading effect */
+    text-rendering: optimizeLegibility;
+}
+
+/* Centering main content */
+main {
+    margin-top: 70px; /* Ensures space for the header */
+    padding: 20px;
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Text styles */
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    opacity: 0.75;
+    transition: opacity 0.3s ease-in-out;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    opacity: 0.75;
+    transition: opacity 0.3s ease-in-out;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.75;
+    transition: opacity 0.3s ease-in-out;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.75;
+    transition: opacity 0.3s ease-in-out;
+}
