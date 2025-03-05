@@ -1,25 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Form toggle functionality
     const loginForm = document.getElementById("login-form")
     const signupForm = document.getElementById("signup-form")
     const createAccountLink = document.getElementById("create-account")
     const backToLoginLink = document.getElementById("back-to-login")
   
-    // Show signup form
     createAccountLink.addEventListener("click", (e) => {
       e.preventDefault()
       loginForm.classList.remove("active")
       signupForm.classList.add("active")
     })
   
-    // Show login form
     backToLoginLink.addEventListener("click", (e) => {
       e.preventDefault()
       signupForm.classList.remove("active")
       loginForm.classList.add("active")
     })
   
-    // Form validation
     const forms = document.querySelectorAll("form")
   
     forms.forEach((form) => {
@@ -38,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         })
   
-        // Check if passwords match in signup form
         if (this.id === "signup-form") {
           const password = document.getElementById("signup-password")
           const confirmPassword = document.getElementById("confirm-password")
@@ -50,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
   
         if (isValid) {
-          // Simulate form submission - in a real app, you would handle the authentication here
           alert("Form submitted successfully!")
         }
       })
@@ -60,13 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
       input.style.borderColor = "#ff3b30"
       input.style.boxShadow = "0 0 0 2px rgba(255, 59, 48, 0.1)"
   
-      // Remove any existing error message
       const existingError = input.parentElement.querySelector(".error-message")
       if (existingError) {
         existingError.remove()
       }
   
-      // Add error message if provided
       if (message) {
         const errorElement = document.createElement("div")
         errorElement.className = "error-message"
