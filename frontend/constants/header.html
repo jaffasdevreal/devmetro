@@ -20,18 +20,22 @@
             color: white;
         }
 
+        /* Sticky header with blur effect */
         header {
-            position: fixed;
+            position: sticky;
             top: 0;
             left: 0;
             width: 100%;
-            height: 35px;
-            background-color: rgba(36, 35, 39, 0.9);
+            height: 50px; /* Slightly taller for better spacing */
+            background: rgba(36, 35, 39, 0.6); /* Semi-transparent */
+            backdrop-filter: blur(10px); /* Blurred background */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 5px 0;
+            padding: 10px 0;
             z-index: 1000;
+            transition: background 0.3s ease-in-out;
         }
 
         header img {
@@ -46,7 +50,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 70px;
+            gap: 50px;
         }
 
         nav ul li {
