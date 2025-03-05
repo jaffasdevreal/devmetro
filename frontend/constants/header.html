@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <style>
+        
         @font-face {
             font-family: 'SF Pro Display';
             src: url('/frontend/fonts/sf-pro-display-regular.woff2') format('woff2');
@@ -16,29 +17,22 @@
         body {
             margin: 0;
             font-family: 'SF Pro Display', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
-            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #000000;
             color: white;
-            height: 200vh; /* Creates scrolling effect */
         }
 
-        /* Sticky header with frosted glass effect */
         header {
-            position: sticky;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 50px;
-            background: rgba(36, 35, 39, 0.3); /* Light transparent background */
-            backdrop-filter: blur(15px); /* Strong blur effect */
-            -webkit-backdrop-filter: blur(15px); /* Safari support */
+            height: 35px;
+            background-color: rgba(36, 35, 39, 0.9);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px 0;
+            padding: 5px 0;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for elevation */
-            transition: background 0.3s ease-in-out;
         }
 
         header img {
@@ -53,7 +47,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 50px;
+            gap: 70px;
         }
 
         nav ul li {
@@ -89,12 +83,5 @@
             </ul>
         </nav>
     </header>
-
-    <main>
-        <h1>Scroll Down</h1>
-        <p>Blur effect should be visible as you scroll.</p>
-        <p>More content...</p>
-        <p style="height: 2000px;"></p> <!-- Just to allow scrolling -->
-    </main>
 </body>
 </html>
