@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&display=swap">
+</head>
+<body>
+    
+    <div id="header-container"></div>
+
+    <main>
+        <h1>Fairmetro</h1>
+        <h2>By Developers, for developers</h2>
+        <p>Scroll down to see the effect of the disappearing header.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, nulla a scelerisque rhoncus, augue sapien lacinia odio, id tincidunt risus libero ac lacus.</p>
+        <p>More content...</p>
+        <p style="height: 2000px;">(Long page content for scrolling)</p>
+    </main>
+
+    <script>
+        fetch("https://fairmetro.com/frontend/constants/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+
+                let lastScroll = 0;
+                const navbar = document.querySelector("header");
+
+                window.addEventListener("scroll", () => {
+                    let currentScroll = window.pageYOffset;
+                    if (currentScroll > lastScroll) {
+                        navbar.style.top = "-70px";
+                    } else {
+                        navbar.style.top = "0";
+                    }
+                    lastScroll = currentScroll;
+                });
+            })
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+
+</body>
+</html>

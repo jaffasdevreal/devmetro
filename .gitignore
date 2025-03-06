@@ -1,0 +1,2 @@
+git rm .config.json
+git commit -m
