@@ -6,23 +6,22 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, se
 // Firebase config
 const firebaseConfig = {
 
-    apiKey: "AIzaSyDAZJpDeVgNo51e_IUL3vv7PnnJzstqiBo",
+    apiKey: "AIzaSyD_aZZoXbLq0P3rlbhu39Txn2khxCHozcM",
   
-    authDomain: "exhibit-cf3a6.firebaseapp.com",
+    authDomain: "fairmetro-fd718.firebaseapp.com",
   
-    databaseURL: "https://exhibit-cf3a6-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "fairmetro-fd718",
   
-    projectId: "exhibit-cf3a6",
+    storageBucket: "fairmetro-fd718.firebasestorage.app",
   
-    storageBucket: "exhibit-cf3a6.firebasestorage.app",
+    messagingSenderId: "994770412304",
   
-    messagingSenderId: "683235244734",
+    appId: "1:994770412304:web:2e344113ca4151e34fbb95",
   
-    appId: "1:683235244734:web:fbdda13506501f70543cef",
-  
-    measurementId: "G-4NNX3XYC1P"
+    measurementId: "G-EFPG0D9D6T"
   
   };
+  
     
 
 // Initialize Firebase
