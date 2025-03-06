@@ -1,28 +1,17 @@
-
 // Import Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
-// Firebase config
+// Load Firebase config from environment variables
 const firebaseConfig = {
-
-    apiKey: "AIzaSyD_aZZoXbLq0P3rlbhu39Txn2khxCHozcM",
-  
-    authDomain: "fairmetro-fd718.firebaseapp.com",
-  
-    projectId: "fairmetro-fd718",
-  
-    storageBucket: "fairmetro-fd718.firebasestorage.app",
-  
-    messagingSenderId: "994770412304",
-  
-    appId: "1:994770412304:web:2e344113ca4151e34fbb95",
-  
-    measurementId: "G-EFPG0D9D6T"
-  
-  };
-  
-    
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
